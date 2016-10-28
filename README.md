@@ -1,4 +1,9 @@
 # About
+
+[![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
+[![forthebadge](http://forthebadge.com/images/badges/powered-by-oxygen.svg)](http://forthebadge.com)
+[![forthebadge](http://forthebadge.com/images/badges/fuck-it-ship-it.svg)](http://forthebadge.com)
+
 This script shows how to use AWS Security Token Service (STS) to grant temporary access for calling APIs.
 
 # Prerequisites
