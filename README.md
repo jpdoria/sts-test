@@ -19,32 +19,33 @@ To use the permissions from the IAM Role for your IAM Account:
 2. Edit Trust Relationship
 3. Add these lines:
 
-```json
-{
-  "Version": "2012-10-17",
-  "Statement": [
+    ```json
     {
-      "Effect": "Allow",
-      "Principal": {
-        "Service": [
-          "elasticbeanstalk.amazonaws.com",
-          "ec2.amazonaws.com"
-        ]
-      },
-      "Action": "sts:AssumeRole"
-    },
-    {
-      "Effect": "Allow",
-      "Principal": {
-        "AWS": "arn:aws:iam::123456789012:user/test-user-0001"
-      },
-      "Action": "sts:AssumeRole"
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Effect": "Allow",
+          "Principal": {
+            "Service": [
+              "elasticbeanstalk.amazonaws.com",
+              "ec2.amazonaws.com"
+            ]
+          },
+          "Action": "sts:AssumeRole"
+        },
+        {
+          "Effect": "Allow",
+          "Principal": {
+            "AWS": "arn:aws:iam::123456789012:user/test-user-0001"
+          },
+          "Action": "sts:AssumeRole"
+        }
+      ]
     }
-  ]
-}
-```
+    ```
 
 4. test-user-0001, EC2, and Elastic Beanstalk can now use the permissions from the IAM Role
 
-# Reference
+# References
 http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_manage_modify.html
+http://docs.aws.amazon.com/IAM/latest/UserGuide/reference_aws-services-that-work-with-iam.html
